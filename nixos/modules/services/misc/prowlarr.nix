@@ -33,6 +33,7 @@ in
         StateDirectory = "prowlarr";
         ExecStart = "${lib.getExe cfg.package} -nobrowser -data=/var/lib/prowlarr";
         Restart = "on-failure";
+        Environment = "HOME=/var/lib/prowlarr";
       };
     };
 
